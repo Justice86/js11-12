@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamplete</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+
+<section class="template">
+    <script type="text/template" id="profile">
+        <div class="list">
+            <div class="photo">
+                <h2><%= name %></h2>
+                <img src="<%= photo.src %>" width="132px" alt="<%= photo.alt %>">
+            </div>
+            <div class="block">
+                <p><%= job %></p>
+                <div class="line"></div>
+                <p><%= why %></p>
+                <ul>
+                    <% for (var i = 0; i < reasons.length; i++) { %>
+                    <li><%= reasons[i] %></li>
+                    <% } %>
+                </ul>
+                <div class="line"></div>
+                <p><%= tel %> <br>
+                    <%= number %></p>
+                <p><%= fb %><br>
+                    <a href="<%= fb_link %>">Андрей Жовтуха</a>
+                </p>
+                <div class="line"></div>
+                <p><%= feedback %><br>
+                    <%= feedback_text %></p>
+            </div>
+        </div>
+    </script>
+</section>
+
+<script src="js/tamplate.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
